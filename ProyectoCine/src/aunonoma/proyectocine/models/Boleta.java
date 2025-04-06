@@ -72,6 +72,10 @@ public class Boleta {
         this.precioFinal = precioFinal;
     }
     
+    //////////////////////////////////
+    /// Metodos
+    ///
+    
     public void calcularPrecioBoleta(){
     try{
         

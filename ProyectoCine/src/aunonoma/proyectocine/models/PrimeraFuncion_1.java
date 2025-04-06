@@ -5,18 +5,24 @@
 package aunonoma.proyectocine.models;
 
 /**
- *
- * @author mateo
+ * Clase donde el duescuento es 50%
+ * 
+ * @author  Mateo Quintero
+ * @version 0.1
+ * @since   2025/07/20
+ * @see     autonoma.aunonoma.proyectocine.models
  */
 public class PrimeraFuncion extends Funcion{
 
     public PrimeraFuncion() {
+        //se indica qeu el tipo de funcion es la primera 
         super("PrimeraFuncion");
     }
 
     @Override
     public double descuentoProsentaje() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ///50%
+       return 0.5;
     }
     
 }

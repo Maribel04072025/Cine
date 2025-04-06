@@ -10,6 +10,18 @@ package aunonoma.proyectocine.models;
  */
 public abstract class Funcion {
     private String tipo;
+    
+    
+    //////////////////////////////////
+    /// Constructor
+    ///
+    public Funcion(String tipo) {
+        this.tipo = tipo;
+    }
+    
     public abstract double descuentoProsentaje();
+
+    
+    
     
 }

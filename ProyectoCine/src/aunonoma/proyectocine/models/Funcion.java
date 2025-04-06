@@ -5,8 +5,12 @@
 package aunonoma.proyectocine.models;
 
 /**
- *
- * @author mateo
+ * Clase abstract donde se va indicar los fiferentes descuentos por funcion
+ * 
+ * @author  Mateo Quintero
+ * @version 0.1
+ * @since   2025/07/20
+ * @see     autonoma.aunonoma.proyectocine.models
  */
 public abstract class Funcion {
     private String tipo;

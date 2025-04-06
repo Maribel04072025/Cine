@@ -70,5 +70,15 @@ public class Boleta {
         this.precioFinal = precioFinal;
     }
     
+    public void calcularPrecioBoleta(){
+    try{
     
+    }catch(NullPointerException e){
+     }
+    }
+
+    public void tipoUsuario(){
+    
+        
+    }
 }

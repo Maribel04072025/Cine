@@ -15,4 +15,42 @@ package aunonoma.proyectocine.models;
 public class Pelicula {
     
     
+    //////////////////////////////////
+    /// Atributos
+    private String titulo;
+    private Funcion funcion;
+    private int costoBase;
+    
+    //////////////////////////////////
+    /// Constructor
+    ///
+    public Pelicula(String titulo, int costoBase) {
+        this.titulo = titulo;
+        this.costoBase = costoBase;
+    }
+
+    //////////////////////////////////
+    /// Metodos de acceso (get)
+    ///
+    
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public int getCostoBase() {
+        return costoBase;
+    }
+    
+    //////////////////////////////////
+    /// Metodos de acceso (set)
+    
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setCostoBase(int costoBase) {
+        this.costoBase = costoBase;
+    }
+    
+    
 }

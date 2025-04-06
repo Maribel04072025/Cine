@@ -70,7 +70,7 @@ public class Pelicula {
             
             switch (op){
                 case 1:
-                    
+            /// se va a especificar bien que funcion es el objeto funcion    
                 System.out.println("felicitaciones la primera funcion tendra descueto de 50%");
                 this.funcion = new PrimeraFuncion();
                 System.out.println("disfrute la pelicula");
@@ -92,6 +92,7 @@ public class Pelicula {
                 
     
         }
+       entrada.close();
     }
     
 }

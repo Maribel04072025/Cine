@@ -8,16 +8,15 @@ package aunonoma.proyectocine.models;
  *
  * @author mateo
  */
-abstract class Usuario {
-    private String tipo;
-    
-    
-    //////////////////////////////////
-    /// Constructor
-    ///
-    public Usuario(String tipo) {
-        this.tipo = tipo;
+public class Mayores extends Usuario {
+
+    public Mayores() {
+        super("Mayores");
+    }
+
+    @Override
+    public int descuentoUsuario() {
+        return 1000;
     }
     
-  public abstract int descuentoUsuario();
 }

@@ -5,24 +5,24 @@
 package aunonoma.proyectocine.models;
 
 /**
- * Clase donde el duescuento es %
+ * Clase donde el duescuento es 0%
  * 
  * @author  Mateo Quintero
  * @version 0.1
  * @since   2025/07/20
  * @see     autonoma.aunonoma.proyectocine.models
  */
-public class Tarde extends Funcion{
+public class Noche extends Funcion{
 
-    public Tarde() {
-        //se indica que el tipo es tarde
-        super("Tarde");
+    public Noche() {
+        //se indica que el tipo es Noche
+        super("Noche");
     }
 
     @Override
     public double descuentoProsentaje() {
-        ///10%
-       return 0.1;
+        ///0%
+       return 0;
     }
     
 }

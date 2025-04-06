@@ -22,6 +22,10 @@ public abstract class Funcion {
     public Funcion(String tipo) {
         this.tipo = tipo;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
     
     public abstract double descuentoProsentaje();
 

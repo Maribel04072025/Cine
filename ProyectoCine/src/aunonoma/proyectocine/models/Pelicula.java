@@ -43,6 +43,9 @@ public class Pelicula {
         return costoBase;
     }
     
+    public Funcion getFuncion() {
+        return funcion;
+    }
     //////////////////////////////////
     /// Metodos de acceso (set)
     

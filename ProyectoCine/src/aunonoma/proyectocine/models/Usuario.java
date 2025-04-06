@@ -18,6 +18,10 @@ abstract class Usuario {
     public Usuario(String tipo) {
         this.tipo = tipo;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
     
   public abstract int descuentoUsuario();
 }

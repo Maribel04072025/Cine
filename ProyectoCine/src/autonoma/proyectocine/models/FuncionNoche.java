@@ -5,24 +5,31 @@
 package autonoma.proyectocine.models;
 
 /**
- * Clase donde el duescuento es 0%
+ * Representa una función de tipo noche.
+ * Esta función no cuenta con ningún tipo de descuento.
  * 
- * @author  Mateo Quintero
- * @version 0.1
- * @since   2025/07/20
- * @see     autonoma.aunonoma.proyectocine.models
+ * @author  Mateo Quintero <maribel.ceballosc@gmail.com>
+ * @version 1.0
+ * @since   2025/04/07
+ * @see     autonoma.proyectocine.models.Funcion
  */
-public class FuncionNoche extends Funcion{
+public class FuncionNoche extends Funcion {
 
+    /**
+     * Crea una nueva función de tipo noche.
+     * El tipo de función se establece como "Funcion de Noche".
+     */
     public FuncionNoche() {
-        //se indica que el tipo es Noche
         super("Funcion de Noche");
     }
 
+    /**
+     * Retorna el porcentaje de descuento aplicable para funciones de noche.
+     * 
+     * @return 0.0, ya que no hay descuento para este tipo de función.
+     */
     @Override
     public double descuentoProsentaje() {
-        ///0%
-       return 0;
+        return 0;
     }
-    
 }

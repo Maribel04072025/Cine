@@ -5,24 +5,31 @@
 package autonoma.proyectocine.models;
 
 /**
- * Clase donde el duescuento es 50%
+ * Representa la primera función del día.
+ * Esta función aplica un descuento del 50% sobre el costo base de la película.
  * 
- * @author  Mateo Quintero
- * @version 0.1
- * @since   2025/07/20
- * @see     autonoma.aunonoma.proyectocine.models
+ * @author  Maribel Ceballos <maribel.ceballosc@gmail.com>
+ * @version 1.0
+ * @since   2025/03/31
+ * @see     autonoma.proyectocine.models.Funcion
  */
-public class PrimeraFuncion extends Funcion{
+public class PrimeraFuncion extends Funcion {
 
+    /**
+     * Crea una nueva función identificada como la primera del día.
+     * El tipo de función se establece como "PrimeraFuncion".
+     */
     public PrimeraFuncion() {
-        //se indica qeu el tipo de funcion es la primera 
         super("PrimeraFuncion");
     }
 
+    /**
+     * Retorna el porcentaje de descuento aplicable para la primera función.
+     * 
+     * @return 0.5, que representa un 50% de descuento.
+     */
     @Override
     public double descuentoProsentaje() {
-        ///50%
-       return 0.5;
+        return 0.5;
     }
-    
 }

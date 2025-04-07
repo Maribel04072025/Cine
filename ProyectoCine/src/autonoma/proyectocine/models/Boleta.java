@@ -11,9 +11,9 @@ import java.util.Scanner;
  * en cuenta descuentos por tipo de función y usuario, y gestionar los datos
  * relacionados a la boleta.
  * 
- * @author Maribel Ceballos <maribel.ceballosc@gmail.com>
+ * @author Mateo Quintero <mateo.quinterom@autonoma.edu.co>
  * @version 1.0
- * @since 2025/03/31
+ * @since 2025/04/07
  */
 public class Boleta {
 

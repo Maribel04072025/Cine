@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Administra la información relacionada con la película vendida,
  * las boletas generadas, el número de venta y el cálculo del total.
  * 
- * @author  Maribel Ceballos <maribel.ceballosc@autonoma.edu.com>
+ * @author  Maribel Ceballos <maribel.ceballosc@autonoma.edu.co>
  * @version 1.0
  * @since   2025/04/07
  */

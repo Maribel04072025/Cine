@@ -1,17 +1,22 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package autonoma.proyectocine.main;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package proyectocine;
 
-/**
- *
- * @author marib
- */
-
-
+package aunonoma.proyectocine.models;
 import java.util.ArrayList;
 import java.util.List;
+
+
+
+
+
 
 public class Cine {
     private List<Pelicula> peliculas;
@@ -73,4 +78,4 @@ public class Cine {
             System.out.println(p.getTitulo() + " - " + p.getGenero());
         }
     }
-}
+

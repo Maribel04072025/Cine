@@ -1,22 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package autonoma.proyectocine.main;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-
-package aunonoma.proyectocine.models;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-
-
-
-
+import autonoma.proyectocine.models.Pelicula;
+import autonoma.proyectocine.models.Venta;
 
 public class Cine {
     private List<Pelicula> peliculas;
@@ -35,47 +24,66 @@ public class Cine {
         peliculas.remove(p);
     }
 
-    public List<Pelicula> mostrarPeliculas() {
+    public Pelicula elegirPeliculas(List<Pelicula> peliculas, Scanner entrada) {
+        System.out.println("Lista de películas:");
+        int contador = 1;
+        for (Pelicula p : peliculas) {
+            System.out.println("Película número " + contador);
+            System.out.println("Título: " + p.getTitulo());
+            System.out.println("Precio base: " + p.getCostoBase());
+            System.out.println("-------------------------");
+            contador++;
+        }
+
+        System.out.println("\n=== Ingrese el número de la película de tu interés ===");
+        int op = entrada.nextInt();
+        entrada.nextLine(); // limpiar buffer
+
+        if (op >= 1 && op <= peliculas.size()) {
+            System.out.println("Disfrute la película");
+            return peliculas.get(op - 1); // las listas empiezan en 0
+        } else {
+            System.out.println("Número incorrecto");
+            return null;
+        }
+    }
+
+    public List<Pelicula> getPeliculas() {
         return peliculas;
     }
 
-    public void vender(List<Venta> ventas, List<Pelicula> peliculas) {
-        this.ventas.addAll(ventas);
-        this.peliculas.removeAll(peliculas);
+    public void vender(Venta nuevaVenta, Scanner entrada) {
+            nuevaVenta.generaBoleta(entrada);
+        nuevaVenta.generarTotal();
+        nuevaVenta.mostrarResumen();
+        this.ventas.add(nuevaVenta);
     }
 
     public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
         Cine cine = new Cine();
 
         // Crear películas
-        Pelicula p1 = new Pelicula("Matrix", "Ciencia ficción");
-        Pelicula p2 = new Pelicula("Titanic", "Romance");
+        Pelicula p1 = new Pelicula("Matrix", 20000);
+        Pelicula p2 = new Pelicula("Titanic", 30000);
 
         // Agregar películas
         cine.agregarPelicula(p1);
         cine.agregarPelicula(p2);
 
-        // Mostrar películas disponibles
-        System.out.println("Películas disponibles:");
-        for (Pelicula p : cine.mostrarPeliculas()) {
-            System.out.println(p.getTitulo() + " - " + p.getGenero());
+        // Elegir película
+        Pelicula peliculaDeseada = cine.elegirPeliculas(cine.getPeliculas(), entrada);
+
+        if (peliculaDeseada != null) {
+            // Crear venta
+            Venta v1 = new Venta(3, peliculaDeseada);
+
+            // Realizar venta
+            cine.vender(v1, entrada);
+        } else {
+            System.out.println("No se pudo realizar la venta por selección inválida.");
         }
 
-        // Crear venta
-        Venta v1 = new Venta(p1, 3);
-        List<Venta> listaVentas = new ArrayList<>();
-        listaVentas.add(v1);
-
-        List<Pelicula> peliculasVendidas = new ArrayList<>();
-        peliculasVendidas.add(p1);
-
-        // Realizar venta
-        cine.vender(listaVentas, peliculasVendidas);
-
-        // Mostrar películas después de la venta
-        System.out.println("\nPelículas después de la venta:");
-        for (Pelicula p : cine.mostrarPeliculas()) {
-            System.out.println(p.getTitulo() + " - " + p.getGenero());
-        }
+        entrada.close(); // ✅ cerrar al final del programa
     }
-
+}

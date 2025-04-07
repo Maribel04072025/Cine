@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package aunonoma.proyectocine.models;
+package autonoma.proyectocine.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Venta {
     private final int numeroVenta;
@@ -23,22 +20,34 @@ public class Venta {
     public void generarTotal() {
         total = 0.0;
         for (Boleta b : boletas) {
-            total += b.getPrecio();
+            total += b.getPrecioFinal();
         }
+        this.total = total;
     }
 
     public void mostrarResumen() {
         System.out.println("Venta #" + numeroVenta);
         System.out.println("Película: " + pelicula.getTitulo());
         System.out.println("Boletas vendidas: " + boletas.size());
-        System.out.println("Total: $" + total);
+        System.out.println("Total: $" + this.total);
     }
 
-    public void generaBoleta() {
-        // Generamos una boleta genérica con precio fijo (puedes modificar)
-        Boleta b = new Boleta("Sala 1", 50.0); 
-        boletas.add(b);
-        generarTotal();
+    // Scanner se pasa como parámetro
+    public void generaBoleta(Scanner entrada) {
+        this.pelicula.tipoFuncion(entrada); // método de la película
+
+        System.out.println("¿Cuántas boletas desea?");
+        int numeroBoletas = entrada.nextInt();
+        entrada.nextLine(); // limpiar buffer
+
+        for (int i = 1; i <= numeroBoletas; i++) {
+            Boleta b = new Boleta(i, this.pelicula);
+            b.tipoUsuario(entrada);
+            b.calcularPrecioBoleta();
+            
+            boletas.add(b);
+        }
+        generarTotal(); // solo una vez
     }
 
     // Getters

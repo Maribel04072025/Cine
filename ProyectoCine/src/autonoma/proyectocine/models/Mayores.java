@@ -2,21 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package aunonoma.proyectocine.models;
+package autonoma.proyectocine.models;
 
 /**
  *
  * @author mateo
  */
-public class Ninio extends Usuario {
+public class Mayores extends Usuario {
 
-    public Ninio() {
-        super("Niño");
+    public Mayores() {
+        super("Mayores");
     }
 
     @Override
     public int descuentoUsuario() {
-        return 500;
+        return 1000;
     }
     
 }

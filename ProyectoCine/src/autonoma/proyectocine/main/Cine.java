@@ -13,7 +13,7 @@ import autonoma.proyectocine.models.Venta;
  * 
  * También contiene el método {@code main} para ejecutar el programa.
  * 
- * @author  Maribel Ceballos <maribel.ceballosc@gmail.com>
+ * @author  Maribel Ceballos <maribel.ceballosc@autonoma.edu.co>
  * @version 1.0
  * @since   2025/04/07
  */

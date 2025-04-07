@@ -8,7 +8,7 @@ package autonoma.proyectocine.models;
  * Representa una función de tipo noche.
  * Esta función no cuenta con ningún tipo de descuento.
  * 
- * @author  Mateo Quintero <maribel.ceballosc@gmail.com>
+ * @author  Maribel Ceballos <maribel.ceballosc@autonoma.edu.co>
  * @version 1.0
  * @since   2025/04/07
  * @see     autonoma.proyectocine.models.Funcion

@@ -8,9 +8,9 @@ package autonoma.proyectocine.models;
  * Representa una función de tipo tarde.
  * Esta función cuenta con un descuento del 10%.
  * 
- * @author  Maribel Ceballos <maribel.ceballosc@gmail.com>
+ * @author  Maribel Ceballos <maribel.ceballosc@autonoma.edu.co>
  * @version 1.0
- * @since   2025/03/31
+ * @since   2025/04/07
  * @see     autonoma.proyectocine.models.Funcion
  */
 public class FuncionTarde extends Funcion {

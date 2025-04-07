@@ -8,9 +8,9 @@ package autonoma.proyectocine.models;
  * Representa la primera función del día.
  * Esta función aplica un descuento del 50% sobre el costo base de la película.
  * 
- * @author  Maribel Ceballos <maribel.ceballosc@gmail.com>
+ * @author  Maribel Ceballos <maribel.ceballosc@autonoma.edu.com>
  * @version 1.0
- * @since   2025/03/31
+ * @since   2025/04/07
  * @see     autonoma.proyectocine.models.Funcion
  */
 public class PrimeraFuncion extends Funcion {

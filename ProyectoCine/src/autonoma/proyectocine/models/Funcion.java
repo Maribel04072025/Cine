@@ -13,7 +13,7 @@ package autonoma.proyectocine.models;
  * Las subclases deben implementar el método {@code descuentoProsentaje()}
  * para definir la lógica del descuento según el tipo de función.
  * 
- * @author Maribel Ceballos <maribel.ceballosc@autonoma.edu.co>
+ * @author Mateo Quintero <mateo.quinterom@autonoma.edu.co>
  * @version 1.0
  * @since 2025/03/31
  */

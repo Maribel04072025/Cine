@@ -9,7 +9,7 @@ package autonoma.proyectocine.models;
  * Este tipo de usuario tiene un descuento fijo de 1000 unidades monetarias
  * sobre el costo base de la boleta.
  * 
- * @author  Maribel Ceballos <maribel.ceballosc@gmail.com>
+ * @author  Mateo Quintero <mateo.quinterom@autonoma.edu.co>
  * @version 1.0
  * @since   2025/04/07
  * @see     autonoma.proyectocine.models.Usuario
